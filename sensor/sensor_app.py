@@ -1,5 +1,5 @@
 # Runner script for all modules
-from datetime import datetime
+from datetime import datetime, date
 from load_data import load_sensor_data
 from house_info import HouseInfo
 ##############################
