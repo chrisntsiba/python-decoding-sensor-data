@@ -8,8 +8,10 @@ class TemperatureData (HouseInfo):
         # The data parameter is a list of strings. 
         # These strings are integers, base 10, which are temperatures.
         for rec in data:
-            rec = int(rec, 10)
+            rec = int(rec)
             recs.append(rec)
+        
+        return recs
     
     # rec_area parameter should have a default value of 0, which translates to all records. 
     # The purpose of this method is to filter the temperature data by the "area" field. 
