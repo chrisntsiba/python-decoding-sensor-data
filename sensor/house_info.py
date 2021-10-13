@@ -30,7 +30,3 @@ class HouseInfo:
                 field_data.append(record)
 
         return field_data
-
-
-
-
