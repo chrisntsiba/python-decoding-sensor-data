@@ -24,7 +24,6 @@ class HouseInfo:
     # In this method, the rec_date input parameter maps to the 'date' column's values.
     def get_data_by_date(self, field, rec_date=date.today()):
         field_data = []
-
         for record in self.data:
             if rec_date.strftime("%m/%d/%y") == record["date"]:
                 field_data.append(record[field])
