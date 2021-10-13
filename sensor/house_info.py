@@ -22,7 +22,7 @@ class HouseInfo:
         return field_data
 
     # In this method, the rec_date input parameter maps to the 'date' column's values.
-    def get_data_by_date(self, field, rec_date=datetime.today()):
+    def get_data_by_date(self, field, rec_date=date.today()):
         field_data = []
 
         for record in self.data:

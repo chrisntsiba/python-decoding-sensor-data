@@ -8,8 +8,7 @@ class TemperatureData (HouseInfo):
         # The data parameter is a list of strings. 
         # These strings are integers, base 10, which are temperatures.
         for rec in data:
-            rec = int(rec)
-            recs.append(rec)
+            recs.append(int(rec, base=10))
         
         return recs
     
