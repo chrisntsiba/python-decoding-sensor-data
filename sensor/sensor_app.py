@@ -77,3 +77,4 @@ recs = energy_data.get_data_by_date(rec_date=test_date)
 print("House Energy sensor records for date: {} = {}".format( test_date.strftime("%m/%d/%y"), len(recs)))
 total_energy = energy_data.calculate_energy_usage(data=recs)
 print("\tEnergy Usage: {:2.2} Watts".format(total_energy))
+
