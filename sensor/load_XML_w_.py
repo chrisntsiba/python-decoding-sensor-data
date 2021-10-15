@@ -10,12 +10,26 @@ import xml.etree.ElementTree as xml
 
 #def load_sensor_data():
     
-sensor_data = []
+xml_data = []
 
 ### glod(): returns a list of paths matching a pathname pattern. ###
 
-# sensor_files = glob.glob(os.path.join(os.getcwd(), "datasets", "*1.csv"))
-remote_file = "https://raw.githubusercontent.com/chrisntsiba/python-decoding-sensor-data/master/datasets/SENSOR_ROOM1.csv"
+xml_files = glob.glob(os.path.join(os.getcwd(), "sensor", "*.xml"))
+xml_file = xml_files[0]
+#remote_file = "https://raw.githubusercontent.com/chrisntsiba/python-decoding-sensor-data/master/sensor/users-100.xml"
 
-csv_file_0 = pd.read_csv(remote_file, nrows=5, skiprows=None)
+xml_file_0 = xml.parse(xml_file)
+users_root = xml_file_0.getroot()
+
+print("\nPrinting root:")
+print(users_root)
+print(users_root.tag)
+print(len(users_root))
+
+print("\nPrinting root child elements:")
+print(users_root[0])
+print(users_root[0].tag)
+print(users_root[0].attrib)
+print("\n")
+
 
